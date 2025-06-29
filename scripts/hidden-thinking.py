@@ -7,7 +7,7 @@ async def call_llm(messages, model="gpt-4o-2024-08-06", temperature=1):
     response = await client.responses.create(
         model=model,
         input=messages,
-        store=False,
+        store=True,
         temperature=temperature,
     )
     return response.output_text
